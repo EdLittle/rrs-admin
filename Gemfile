@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -21,6 +20,16 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'tinymce-rails'
+gem "twitter-bootstrap-rails", '~> 2.2.6'
+gem "slim"
+gem "therubyracer"
+gem "less-rails"
+gem "annotate"
+gem "bcrypt-ruby", '~> 3.0.0'
+
+#Test Driven Development Gems
+gem "rspec-rails", :group => [:test, :development]
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -31,6 +40,12 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
 end
 
 # Use ActiveModel has_secure_password
